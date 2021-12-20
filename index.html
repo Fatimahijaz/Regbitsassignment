@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="style.css" />   
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&family=PT+Sans&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">  
+    <title>Donation Page</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="remaining" id="remainingdiv">
+       <b><span id="remainstart">$</span></b>
+       <b><span id="remaining">300</span> </b>
+        <span id="remainend" style="font-family: Source Sans Pro">still needed for this project </span>
+      </div>
+      <div class="bottomdiv" id="bottomdiv"></div>
+ 
+
+      <div class="mainbox" id="mainbox">
+        <span>
+          <progress id="myProgress" min="0" value="0" max="300"></progress>
+        </span>
+        <div id="withoutprog">
+      <div><span id="days"></span><span>to fund this project</span>  </div>  
+        <div id="donate"> <span id="donorstart">Donate as much as you can. </span><b><span id="donor"></span></b><span id="donorend">
+            Every dollar
+            helps.</span ></div>  
+        </div>
+
+        <div class="entermoney" id="entermoney">
+          <form id="form1"  class="entermoneyform">
+            <span class="dollar" id="dollar">$</span>
+           <span><input
+            type="number"
+            id="inputdata"
+            onkeyup="success() "
+            class="currency"
+            required
+            name="text1"  />
+</span> 
+        <span> <button type="button" onclick="func()" id="buttondata" disabled>
+          Give Now
+        </button></span>    
+      </form>
+</div>
+    
+          <div id="why" >
+            <a><i>Why give $50?</i></a >
+          </div>
+
+
+   
+    <script>
+      var dat = Date();
+      var future = new Date("March 1,2022");
+      
+      var diff = Math.floor((Date.parse(future) - Date.parse(dat)) / 86400000);
+      document.getElementById("days").innerHTML =
+        "Only " + diff + " days left ";
+  
+      </script>
+          <script src="index1.js">
+      
+          </script>
+        
+  </body>
+</html>
